@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.png';
-import nadhir from './nadhir.jpg';
+//import logo from './logo.png';
+import nadhir from './images/nadhir.jpg';
 
 const PostStyle = {
   backgroundColor: '#fff',
@@ -23,8 +23,8 @@ const HeadStyle = {
 
 const imgS = {
     width:'40px',
-    margin:'10px'
-  
+    margin:'10px',
+    borderRadius: '50%',
   }
 
   const imgP = {
@@ -47,11 +47,11 @@ const imgS = {
       return(
         <div style = {PostStyle}>
           <div style ={HeadStyle}>
-            <img src={logo} alt="Logo" style={imgS} />
+            <img src={this.props.profilePicture} alt="Profile Picture" style={imgS} />
             <h5 > {this.props.username}</h5>
           </div>
           <div>
-          <img src={this.props.imgsrc} alt="Logo" style={imgP} />
+          <img src={this.props.imgSrc} alt="Logo" style={imgP} />
           </div>
           
           
