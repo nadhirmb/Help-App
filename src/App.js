@@ -1,19 +1,9 @@
-import Navbar from './components/navbar/Navbar';
-import Sidebar from './components/sidebar/Sidebar';
-import Posts from './components/posts/Posts';
-
-
+import Feed from "./pages/feed";
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import profil from "./pages/profil";
 // import { useState, useEffect } from 'react';
 
 
-const mainStyle ={
-  width: '100%',
-  display: 'flex',
-  'flex-direction': 'row',
-  'align-items': 'flex-start',
-  'justify-content': 'center',
-  background: '#e5e5e5',
-}
 const App = () => {
   // const [counter, setCounter] = useState(0);
 
@@ -22,15 +12,13 @@ const App = () => {
   // })
 
   return (
-
-    <div className="App">
-
-      <Navbar />
-      <div style={mainStyle}>
-        <Sidebar />
-        <Posts />
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Feed}></Route>
+        <Route path="/profil" exact component={profil}></Route>
+     </Switch>
+    </Router>
+    
   );
 }
 
