@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.png';
 import nadhir from './nadhir.jpg';
 
@@ -37,45 +37,52 @@ const imgS = {
     display :'flex',
     justifyContent: 'space-between',
   }
-const Post = () => {
-  return(
-    <div style = {PostStyle}>
-      <div style ={HeadStyle}>
-        <img src={logo} alt="Logo" style={imgS} />
-        <h5 > nadhir mazari boufares</h5>
-      </div>
-      <div>
-      <img src={nadhir} alt="Logo" style={imgP} />
-      </div>
-      
-      
-      <div style={postFooter}>
+  
+  class Post extends Component {
 
-        <button style={{ 
-          backgroundColor: '#00e5',
-           border: 'none',
-           color: 'white',
-          padding: '10px 20px',
-          textAlign: 'center',
-          textDecoration: 'none',
-          display: 'inline-block',
-          fontSize: '12px',}} >up / down</button>
-        <button style={{ 
-          backgroundColor: '#4CAF50',
-           border: 'none',
-           color: 'white',
-          padding: '10px 20px',
-          textAlign: 'center',
-          textDecoration: 'none',
-          display: 'inline-block',
-          fontSize: '12px',}} 
-        >Donate</button>
-
-      </div>
-    </div>
-  )
-}
-
+    constructor(props) {
+      super(props)
+    }
+    render() {
+      return(
+        <div style = {PostStyle}>
+          <div style ={HeadStyle}>
+            <img src={logo} alt="Logo" style={imgS} />
+            <h5 > {this.props.username}</h5>
+          </div>
+          <div>
+          <img src={this.props.imgsrc} alt="Logo" style={imgP} />
+          </div>
+          
+          
+          <div style={postFooter}>
+    
+            <button style={{ 
+              backgroundColor: '#00e5',
+               border: 'none',
+               color: 'white',
+              padding: '10px 20px',
+              textAlign: 'center',
+              textDecoration: 'none',
+              display: 'inline-block',
+              fontSize: '12px',}} >up / down</button>
+            <button style={{ 
+              backgroundColor: '#4CAF50',
+               border: 'none',
+               color: 'white',
+              padding: '10px 20px',
+              textAlign: 'center',
+              textDecoration: 'none',
+              display: 'inline-block',
+              fontSize: '12px',}} 
+            >Donate</button>
+    
+          </div>
+        </div>
+      )
+    }
+  }
+  
 
 
 export default Post

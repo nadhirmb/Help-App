@@ -1,5 +1,6 @@
-import React from 'react'
-import Post from './Post'
+import React, { Component } from 'react';
+import Post from './Post';
+import nadhir from './nadhir.jpg';
 
 const postLists ={
   paddingTop :'10px',
@@ -14,10 +15,10 @@ const Posts = () => {
 
   return(
     <div style ={postLists}>
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      <Post imgsrc={nadhir} username="nadhir mazari boufares"/>
+      <Post imgsrc={nadhir} username="nadhir mazari boufares"/>
+      <Post imgsrc={nadhir} username="nadhir mazari boufares"/>
+      <Post imgsrc={nadhir} username="nadhir mazari boufares"/>
     </div>
   );
 }
