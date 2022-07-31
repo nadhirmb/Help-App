@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/navbar/Navbar';
+import Sidebar from './components/sidebar/Sidebar';
+import Posts from './components/posts/Posts';
 
-function App() {
+
+// import { useState, useEffect } from 'react';
+
+
+const mainStyle ={
+  width: '100%',
+  display: 'flex',
+  'flex-direction': 'row',
+  'align-items': 'flex-start',
+  'justify-content': 'center',
+  background: '#e5e5e5',
+}
+const App = () => {
+  // const [counter, setCounter] = useState(0);
+
+  // useEffect(() =>{
+  //   alert ('Reload')//happen at the start whan a component rendered 
+  // })
+
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Navbar />
+      <div style={mainStyle}>
+        <Sidebar />
+        <Posts />
+      </div>
     </div>
   );
 }
