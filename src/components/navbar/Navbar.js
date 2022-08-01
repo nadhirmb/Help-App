@@ -26,18 +26,41 @@ const navbarWhole ={
   
 }
 
+const one ={
+  width: '300px',
+  display: 'flex',
+  'flex-direction': 'row',
+  'align-items': 'center',
+  'justify-content': 'center',
+
+}
+const two ={
+  width: '400px'
+}
+const three ={
+  margin : '0px 40px'
+}
+const four ={
+  flex : '1 1 0',
+}
+
 const Navbar = () => {
   return (
 
     <div style ={navbarWhole}>
       <div style = {navbarCenterd}>
+        <div style={one}>
         <Logo/>
-        <div>
-            <SearchBar />
-    
         </div>
+        
+        <div style={two}>
+            <SearchBar />
+        </div>
+        <div style={three}>
         <HelpIcon />
-        <div> profile</div>
+        </div>
+
+        <div style={four}> profile</div>
       </div>
     
     </div>
