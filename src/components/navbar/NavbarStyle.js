@@ -1,9 +1,39 @@
-import React from 'react'
+import styled from 'styled-components';
 
-const NavbarStyle = () => {
-  return (
-    <div>NavbarStyle</div>
-  )
-}
+export const NavbarWhole = styled.div`
+width: 100% ;
+display: flex ;
+flex-direction: row;
+align-items: center ;
+justify-content: center ;
+background: #9DD180 ;
+height: 60px ;
+`;
 
-export default NavbarStyle
+export const DivInsideStyled = styled.div`
+  width: 1000px ;
+  display: flex ;
+  flex-direction: row ;
+  align-items :  center ;
+  justify-content :  space-between ;
+  height: 60px ;`;
+  
+
+export const DivItemOne = styled.div`
+  width: 300px ;
+  display:  flex ;
+  flex-direction : row ;
+  align-items: center ;
+  justify-content : center ;
+`; 
+  
+export const DivItemTwo = styled.div`
+  width : 400px ;`;
+
+export const DivItemThree = styled.div`
+   margin : 0px 40px ;
+`;
+
+export const DivItemFour = styled.div`
+flex : 1 1 0;
+`;

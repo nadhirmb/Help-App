@@ -3,6 +3,8 @@ import React from 'react'
 const ButtonStyle ={
   padding: '10px',
    color:'#000',
+   fontFamily : 'Montserrat',
+   fontWeight: 'Bold',
   'font-weight':'24px',
   'border-radius':'25px',
   'border': '4px solid #9DD180',

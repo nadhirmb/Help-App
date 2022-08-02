@@ -6,16 +6,9 @@ import profile2 from './images/profile2.jpg';
 import profile3 from './images/profile3.jpg';
 import profile4 from './images/profile4.jpg';
 import profile5 from './images/profile5.jpg';
+import { DivPostsStyled } from './PostsStyles';
 
-const postLists ={
-  paddingTop :'10px',
-  width: '700px',
-  display: 'flex',
-  flexWarp: 'wrap',
-  flexDirection : 'column',
-  alignItems : 'center',
-  justifyContent: 'center',
-}
+
 class Posts extends Component {
 
   postsList = [{
@@ -41,12 +34,12 @@ class Posts extends Component {
   }]
   render() {
     return (
-      <div style ={postLists}>
+      <DivPostsStyled>
         {this.postsList.map((post)=>(
           <Post imgSrc={post["imgsrc"]} username={post["username"]} profilePicture = {post["profilePicture"]}/>
         ))}
       
-      </div>
+      </DivPostsStyled>
     )
   }
 }

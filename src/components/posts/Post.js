@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 //import logo from './logo.png';
-import nadhir from './images/nadhir.jpg';
 
 const PostStyle = {
   backgroundColor: '#fff',
@@ -17,7 +16,6 @@ const HeadStyle = {
   display: 'flex',
   'flex-direction': 'row',
   'align-items': 'center',
-
   height: '60px',
 }
 
@@ -40,14 +38,12 @@ const imgS = {
   
   class Post extends Component {
 
-    constructor(props) {
-      super(props)
-    }
+    
     render() {
       return(
         <div style = {PostStyle}>
           <div style ={HeadStyle}>
-            <img src={this.props.profilePicture} alt="Profile Picture" style={imgS} />
+            <img src={this.props.profilePicture} alt="Profile " style={imgS} />
             <h5 > {this.props.username}</h5>
           </div>
           <div>
