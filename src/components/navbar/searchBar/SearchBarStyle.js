@@ -15,7 +15,12 @@ export const ButtonStyled = styled.button`
   appearance: none ;
   padding: 10px ;
   border: none ;
-  background-color : #f0f ;
-  color: #fff ;
+  background-color : #F0F0F0 ;
+  color: #121212 ;
   font-weight :100 ;
-  border-radius: 5px ;`;
+  border-radius: 5px ;
+  transition-duration: 0.4s;
+&:hover{
+  background-color: #121212;
+  color: #F0F0F0;
+}`;

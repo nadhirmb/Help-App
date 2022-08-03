@@ -1,6 +1,7 @@
 import Feed from "./pages/feed";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import profil from "./pages/profil";
+import { GlobalStyles } from "./globalStyle";
 // import { useState, useEffect } from 'react';
 
 
@@ -13,7 +14,8 @@ const App = () => {
 
   return (
     <Router>
-      <Switch>
+      <GlobalStyles />
+      <Switch> 
         <Route path="/" exact component={Feed}></Route>
         <Route path="/profil" exact component={profil}></Route>
      </Switch>

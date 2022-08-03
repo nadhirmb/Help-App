@@ -1,12 +1,12 @@
 import React from 'react';
 import { ButtonStyled, InputStyled } from './SearchBarStyle';
-
+import {FaSearch} from'react-icons/fa';
 
 const searchBar = () => {
   return (
     <>
     <InputStyled />
-    <ButtonStyled > Search </ButtonStyled>
+    <ButtonStyled > <FaSearch/> Search </ButtonStyled>
     </> 
   );
 }

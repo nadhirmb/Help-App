@@ -31,7 +31,7 @@ export const DivItemTwo = styled.div`
   width : 400px ;`;
 
 export const DivItemThree = styled.div`
-   margin : 0px 40px ;
+   margin : 0px 20px ;
 `;
 
 export const DivItemFour = styled.div`

@@ -9,15 +9,9 @@ export const DivStyled = styled.div`
   align-items: center ;
   justify-content : flex-start ;
   margin-top: 20px;
-  border-right-style: groove ;
-  border-right-color:coral ;
-  border-right-width: 7px; 
 `;
 
 export const DivSideSection = styled.div`
-  border-bottom-style: groove ;
-  border-bottom-color:coral ;
-  border-bottom-width: 7px; 
 `;
 
 export const ButtonLocation = styled.button`
@@ -29,4 +23,13 @@ export const ButtonLocation = styled.button`
             text-align: center ;
             text-decoration: none ;
             display: inline-block ;
-            font-size: 12px ;`;
+            font-size: 12px ;
+`;
+
+export const SpanLine = styled.span`
+        font-size: 0;
+        padding: 2px 120px;
+        background-color: grey;
+        border-radius: 10px;
+        margin: 25px ;
+`;
