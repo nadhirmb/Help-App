@@ -8,7 +8,7 @@ import Posts from '../components/posts/Posts';
 const mainStyle ={
   width: '100%',
   display: 'flex',
-  'flex-direction': 'row',
+  flexDirection: 'row',
   'align-items': 'flex-start',
   'justify-content': 'center',
   background: '#e5e5e5',
