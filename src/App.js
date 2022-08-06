@@ -1,7 +1,13 @@
 import Feed from "./pages/feed";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import profil from "./pages/profil";
+import profil from "./pages/profil/profil";
 import { GlobalStyles } from "./globalStyle";
+
+
+
+import SignInPage from "./pages/signin/SignIn.js";
+import SignUpPage from "./pages/signup/SignUpPage.js";
+
 // import { useState, useEffect } from 'react';
 
 
@@ -18,6 +24,8 @@ const App = () => {
       <Switch> 
         <Route path="/" exact component={Feed}></Route>
         <Route path="/profil" exact component={profil}></Route>
+        <Route path="/signin" exact component={SignInPage}></Route>
+        <Route path="/signup" exact component={SignUpPage}></Route>
      </Switch>
     </Router>
     
