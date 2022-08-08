@@ -1,7 +1,7 @@
-import Navbar from '../components/navbar/Navbar';
-import Sidebar from '../components/sidebar/Sidebar';
-import Posts from '../components/posts/Posts';
-
+import Navbar from '../../components/navbar/Navbar';
+import Sidebar from '../../components/sidebar/Sidebar';
+import Posts from '../../components/posts/Posts';
+import TestForm from '../../components/testForm/TestForm';
 // import { useState, useEffect } from 'react';
 
 
@@ -27,6 +27,7 @@ const Feed = () => {
       <Navbar />
       <div style={mainStyle}>
         <Sidebar />
+        <TestForm />
         <Posts />
       </div>
     </div>

@@ -1,4 +1,4 @@
-import Feed from "./pages/feed";
+import Feed from "./pages/feed/feed";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import profil from "./pages/profil/profil";
 import { GlobalStyles } from "./globalStyle";
