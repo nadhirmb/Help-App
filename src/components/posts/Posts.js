@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Post from './Post';
+import { useSelector } from 'react-redux';
+
+
 import nadhir from './images/nadhir.jpg';
 import profile1 from './images/profile1.jpg';
 import profile2 from './images/profile2.jpg';
@@ -9,39 +12,41 @@ import profile5 from './images/profile5.jpg';
 import { DivPostsStyled } from './PostsStyles';
 
 
-class Posts extends Component {
+const  Posts = () => {
+  const posts = useSelector((state) => state.posts);
+  console.log(posts);
 
-  postsList = [{
-    username: "nadhir mazari boufares",
-    imgsrc: nadhir,
-    profilePicture: profile1
+   const postsList = [{
+   username: "nadhir mazari boufares",
+   imgsrc: nadhir,
+   profilePicture: profile1
   },{
-    username: "Talout Chattah",
-    imgsrc: nadhir,
-    profilePicture: profile2
+   username: "Talout Chattah",
+   imgsrc: nadhir,
+   profilePicture: profile2
   },{
-    username: "Boulahia Bahaa",
-    imgsrc: nadhir,
-    profilePicture: profile3
+   username: "Boulahia Bahaa",
+   imgsrc: nadhir,
+   profilePicture: profile3
   },{
-    username: "Belabessi Adam",
-    imgsrc: nadhir,
-    profilePicture: profile4
+   username: "Belabessi Adam",
+   imgsrc: nadhir,
+   profilePicture: profile4
   },{
-    username: "Alaoua Youcef",
-    imgsrc: nadhir,
-    profilePicture: profile5
-  }]
-  render() {
+   username: "Alaoua Youcef",
+   imgsrc: nadhir,
+   profilePicture: profile5
+  }] ;
+
     return (
       <DivPostsStyled>
-        {this.postsList.map((post)=>(
+        {postsList.map((post)=>(
           <Post imgSrc={post["imgsrc"]} username={post["username"]} profilePicture = {post["profilePicture"]}/>
         ))}
       
       </DivPostsStyled>
     )
-  }
+  
 }
 
 

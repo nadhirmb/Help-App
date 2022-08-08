@@ -3,7 +3,6 @@ import SideElement from './sideElement/SideElement';
 import { DivStyled, DivSideSection, ButtonLocation, SpanLine } from './SidebarStyle';
 import { FaBuilding,FaFire,FaAppleAlt,FaTshirt } from 'react-icons/fa';
 
-
 const style = { color: "green", fontSize: "1.4em", margin: "0px 5px" };
 
 
@@ -11,9 +10,9 @@ const Sidebar = () => {
   return (
     <>
       <DivStyled>
-        
+      
         <DivSideSection>
-          <SideElement icon = {<FaBuilding style={style}/>} name = {'organisation'} />
+          <SideElement icon = {<FaBuilding style={style}/>}  name = {'organisation'} />
           <SideElement icon = {<FaFire     style={style} />} name = {'Trends'} />
           <SpanLine></SpanLine>
         </DivSideSection>
@@ -34,8 +33,7 @@ const Sidebar = () => {
          Terms and conditigo,llns - legal - company
         </DivSideSection>
       </DivStyled>
-      
-    </>
+      </>
   );
 }
 
