@@ -1,10 +1,13 @@
-import Feed from "./pages/feed";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 import profil from "./pages/profil/profil";
 import { GlobalStyles } from "./globalStyle";
+import { useDispatch } from "react-redux";
+import { getPosts } from './actions/posts'
+import { useEffect } from "react";
 
-
-
+//pages
+import Feed from "./pages/feed";
 import SignInPage from "./pages/signin/SignIn.js";
 import SignUpPage from "./pages/signup/SignUpPage.js";
 
@@ -17,6 +20,12 @@ const App = () => {
   // useEffect(() =>{
   //   alert ('Reload')//happen at the start whan a component rendered 
   // })
+
+  const dispatch = useDispatch();
+
+  useEffect( () => {
+        dispatch(getPosts());
+  }, [dispatch]);
 
   return (
     <Router>
