@@ -1,7 +1,14 @@
-import Navbar from '../components/navbar/Navbar';
-import Sidebar from '../components/sidebar/Sidebar';
-import Posts from '../components/posts/Posts';
 
+
+
+
+import { useState } from 'react';
+
+
+import Navbar from '../../components/navbar/Navbar';
+import Sidebar from '../../components/sidebar/Sidebar';
+import Posts from '../../components/posts/Posts';
+import PostForm from '../../components/postForm/PostForm';
 // import { useState, useEffect } from 'react';
 
 
@@ -20,15 +27,20 @@ const Feed = () => {
   // useEffect(() =>{
   //   alert ('Reload')//happen at the start whan a component rendered 
   // })
+const [helpBtn, setHelpBtn] = useState(false);
+const [open, setOpen] = useState(false);
+
 
   return (
 
     <div >
-      <Navbar />
+      <Navbar setfunc ={setHelpBtn}   />
       <div style={mainStyle}>
         <Sidebar />
-        <Posts />
+        <Posts openContent ={open} setOpenContent={setOpen} />
       </div>
+      <PostForm trigger={helpBtn} setTrigger={setHelpBtn} /> 
+     
     </div>
   );
 }

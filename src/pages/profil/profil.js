@@ -5,7 +5,7 @@ import { DivProfil } from './profileStyle';
 import ProfileContent from '../../components/profileContent/ProfileContent';
 
 
-const profil = () => {
+const Profil = () => {
   return (
     <div>
       <Navbar />
@@ -17,4 +17,4 @@ const profil = () => {
   )
 }
 
-export default profil;
+export default Profil;

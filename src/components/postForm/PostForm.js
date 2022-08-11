@@ -1,9 +1,13 @@
 import React from 'react'
+import { CloseBtn, FormStyling, InsideForm } from './PostFormStyle';
 
-const PostForm = () => {
-  return (
-    <div>PostForm
-      <div>
+
+const PostForm = (props) => {
+  return (props.trigger) ? (
+    <FormStyling>
+      <InsideForm>
+        <CloseBtn onClick = {() => props.setTrigger(false)}> Close  </CloseBtn>
+        {props.childern}
         <form>
           <div> title </div>
           <div> description </div>
@@ -12,10 +16,10 @@ const PostForm = () => {
           <div> need </div>
           <div> amount </div>
         </form>
-      </div>
+      </InsideForm>
 
-    </div>
-  )
+    </FormStyling>
+  ) : "";
 }
 
 export default PostForm

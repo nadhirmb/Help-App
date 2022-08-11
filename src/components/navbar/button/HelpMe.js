@@ -1,10 +1,10 @@
 import React from 'react';
 import { ButtonStyle } from './HelpMeStyle';
 
-const HelpIcon = () => {
+const HelpIcon = (props) => {
   return(
 <>
-<ButtonStyle > Help me ..</ButtonStyle>
+<ButtonStyle onClick={() => props.name(true)}> HELP</ButtonStyle>
 </>
   );
 }

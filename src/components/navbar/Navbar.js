@@ -2,22 +2,23 @@ import React from 'react';
 import logo from './logo192.png';
 import SearchBar from './searchBar/SearchBar';
 import HelpIcon from './button/HelpMe';
-
-
+import Menu from './menu/Menu';
 import {DivItemOne, DivItemTwo, NavbarWhole, DivInsideStyled, DivItemThree, DivItemFour} from './NavbarStyle';
+import Profile from './profil/Profile';
+import { Link } from 'react-router-dom';
 
 
 
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
 
    <NavbarWhole>
       <DivInsideStyled>
-        <DivItemOne> <img src={logo} alt="lohgo"/></DivItemOne>
+        <DivItemOne> <Link to="/"><img src={logo} alt="logo" /></Link> </DivItemOne>
         <DivItemTwo> <SearchBar /> </DivItemTwo>
-        <DivItemThree> <HelpIcon /> </DivItemThree>
-        <DivItemFour> profil </DivItemFour>
+        <DivItemThree> <HelpIcon  name = {props.setfunc} /> </DivItemThree>
+        <DivItemFour> <Profile > <Menu></Menu> </Profile ></DivItemFour>
       </DivInsideStyled>
     
     </NavbarWhole>

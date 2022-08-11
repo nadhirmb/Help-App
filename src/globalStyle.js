@@ -8,7 +8,7 @@ export  const GlobalStyles = createGlobalStyle`
 body {
     margin: 0;
     padding: 0;
-    background: teal;
+    background: none;
     font-family: Montserrat, Helvetica, Sans-Serif;
   }
 `;

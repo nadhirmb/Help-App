@@ -9,6 +9,8 @@ export const DivStyled = styled.div`
   align-items: center ;
   justify-content : flex-start ;
   margin-top: 20px;
+  position : sticky ; 
+  top :  60px ;
 `;
 
 export const DivSideSection = styled.div`

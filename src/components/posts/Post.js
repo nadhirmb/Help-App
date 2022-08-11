@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PostContent from './postContent/PostContent';
 //import logo from './logo.png';
 
 const PostStyle = {
@@ -39,7 +40,7 @@ const imgS = {
   class Post extends Component {
 
     
-    render() {
+    render(props) {
       return(
         <div style = {PostStyle}>
           <div style ={HeadStyle}>
@@ -62,16 +63,8 @@ const imgS = {
               textDecoration: 'none',
               display: 'inline-block',
               fontSize: '12px',}} >up / down</button>
-            <button style={{ 
-              backgroundColor: '#4CAF50',
-               border: 'none',
-               color: 'white',
-              padding: '10px 20px',
-              textAlign: 'center',
-              textDecoration: 'none',
-              display: 'inline-block',
-              fontSize: '12px',}} 
-            >Donate</button>
+            <button onClick={() => this.props.name(true)}>Donate</button>
+            <PostContent contentTrigger = {this.props.last} setContentTrigger={this.props.name} />
     
           </div>
         </div>

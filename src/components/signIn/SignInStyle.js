@@ -169,11 +169,10 @@ margin : 20px 0px;
 
 
 export const ForgetPasswordLink = styled.a`
-            
+
 `;
 
 export const Header = styled.div`
 font-weight : bold ;
 font-size : 30px;
-y
 `;

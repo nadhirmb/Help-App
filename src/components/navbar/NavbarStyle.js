@@ -6,8 +6,11 @@ display: flex ;
 flex-direction: row;
 align-items: center ;
 justify-content: center ;
-background: #9DD180 ;
+background-color : rgba(157, 209, 48, .3) ;
 height: 60px ;
+position: sticky;
+top : 0;
+backdrop-filter: blur(3px);
 `;
 
 export const DivInsideStyled = styled.div`

@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react' ;
 
-const PostContent = () => {
-  return (
+const PostContent = (props) => {
+  return (props.contentTrigger) ? (
     <div>PostContent
+       <button onClick = {() => props.setContentTrigger(false)}> Close  </button>
+        {props.childern}
+        <div>
         <div>images carousel</div>
         <div>title </div>
         <div> time published </div>
@@ -10,9 +13,9 @@ const PostContent = () => {
         <div> location </div>
         <div> category </div>
         <div> need </div>
-        <div> amount </div>
+        <div> amount </div></div>
     </div>
-  )
+  ) : "" ;
 }
 
 export default PostContent
