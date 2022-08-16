@@ -1,8 +1,10 @@
 import React from 'react' ;
+import { InsidePostContent, PostContentStyled } from './PostContentStyle';
 
 const PostContent = (props) => {
   return (props.contentTrigger) ? (
-    <div>PostContent
+    <PostContentStyled>
+    <InsidePostContent>PostContent
        <button onClick = {() => props.setContentTrigger(false)}> Close  </button>
         {props.childern}
         <div>
@@ -14,7 +16,8 @@ const PostContent = (props) => {
         <div> category </div>
         <div> need </div>
         <div> amount </div></div>
-    </div>
+    </InsidePostContent>
+    </PostContentStyled>
   ) : "" ;
 }
 

@@ -16,7 +16,7 @@ justify-content: center;
 `;
 
 
-export const DivForm = styled.div`
+export const DivForm = styled.form`
 display : flex; 
 flex-direction: column;
 justify-content: flex-start;
@@ -84,7 +84,7 @@ export const SignUpDiv = styled.div`
       border-radius : 25px;
 `;
 
-export const ButtonSingUp = styled.a`
+export const ButtonSingUp = styled.button`
 background-color : grey ;
 width : 100%;
 height : 40px;
@@ -99,10 +99,7 @@ border-radius : 25px;
 }
 `;
 
-export const ButtonSingIn = styled.input.attrs({
-  type : "submit" ,
-  value : "Sign In"
-})`
+export const ButtonSingIn = styled.button`
 
 background-color : green ;
 width : 300px;
