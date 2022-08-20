@@ -1,0 +1,28 @@
+[
+
+ {
+  "username": "nadhir manzari boufares",
+  "imgsrc": "./images/nadhir.jpg",
+  "profilePicture": "./images/profile1.jpg"
+ },
+ {
+  "username": "Talout Chattah",
+  "imgsrc": "./images/nadhir.jpg",
+  "profilePicture": "./images/profile2.jpg"
+ },
+ {
+  "username": "Boulahia Bahaa",
+  "imgsrc": "./images/nadhir.jpg",
+  "profilePicture": "./images/profile3.jpg"
+ },
+ {
+  "username": "Belabessi Adam",
+  "imgsrc": "/images/nadhir.jpg",
+  "profilePicture": "/images/profile4.jpg"
+ },
+ {
+  "username": "Alaoua Youcef",
+  "imgsrc": "images/nadhir.jpg",
+  "profilePicture": "images/profile5.jpg"
+ }
+]

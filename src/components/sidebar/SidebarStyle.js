@@ -14,6 +14,15 @@ export const DivStyled = styled.div`
 `;
 
 export const DivSideSection = styled.div`
+
+`;
+
+export const LinkSideSection = styled.div`
+display : flex; 
+flex-direction : column ; 
+padding : 5px; 
+align-items: flex-start;
+justify-content: left;
 `;
 
 export const ButtonLocation = styled.button`
@@ -30,7 +39,7 @@ export const ButtonLocation = styled.button`
 
 export const SpanLine = styled.span`
         font-size: 0;
-        padding: 2px 120px;
+        padding: 1px 120px;
         background-color: grey;
         border-radius: 10px;
         margin: 25px ;

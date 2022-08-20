@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PostContent from './postContent/PostContent';
+import { ButtonDonate, ButtonUp } from './PostStyle';
 //import logo from './logo.png';
 
 const PostStyle = {
@@ -37,40 +38,33 @@ const imgS = {
     justifyContent: 'space-between',
   }
   
-  class Post extends Component {
+ const Post = (props) => {
 
-    
-    render(props) {
+
       return(
         <div style = {PostStyle}>
           <div style ={HeadStyle}>
-            <img src={this.props.profilePicture} alt="Profile " style={imgS} />
-            <h5 > {this.props.username}</h5>
+            <img src={props.profilePicture} alt="Profile " style={imgS} />
+            <h5 > {props.username} </h5>
           </div>
           <div>
-          <img src={this.props.imgSrc} alt="Logo" style={imgP} />
+          <img src={props.imgSrc} alt="Logo" style={imgP} />
           </div>
           
           
           <div style={postFooter}>
     
-            <button style={{ 
-              backgroundColor: '#00e5',
-               border: 'none',
-               color: 'white',
-              padding: '10px 20px',
-              textAlign: 'center',
-              textDecoration: 'none',
-              display: 'inline-block',
-              fontSize: '12px',}} >up / down</button>
-            <button onClick={() => this.props.name(true)}>Donate</button>
-            <PostContent contentTrigger = {this.props.last} setContentTrigger={this.props.name} />
+            <ButtonUp  > Up </ButtonUp>
+
+
+            <ButtonDonate onClick={() => props.name(true)}>Donate</ButtonDonate>
+            <PostContent contentTrigger = {props.last} setContentTrigger={props.name} />
     
           </div>
         </div>
       )
     }
-  }
+  
   
 
 
