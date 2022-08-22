@@ -24,8 +24,6 @@ const App = () => {
   return (
     <Router>
       <GlobalStyles />
-
-
       <Routes >
         <Route path="/"  element={<Feed />}></Route>
         <Route path="/profil"  element={<Profil />}></Route>

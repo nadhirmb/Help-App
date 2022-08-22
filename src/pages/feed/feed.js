@@ -3,12 +3,30 @@
 
 
 import { useState } from 'react';
+import {ThemeProvider} from "styled-components"; 
 
 
 import Navbar from '../../components/navbar/Navbar';
 import Sidebar from '../../components/sidebar/Sidebar';
 import Posts from '../../components/posts/Posts';
 import PostForm from '../../components/postForm/PostForm';
+
+
+const LightTheme = { 
+  pageBackground  : 'rgba(157, 209, 48, .3)' ,
+  titleColor : '#dc658b',
+  tagLineColor : 'black'
+}
+const DarkTheme = {
+  pageBackground  : '#282c36' ,
+  titleColor : 'lightpink',
+  tagLineColor : 'lavender'
+}
+
+const themes = { 
+  light : LightTheme ,
+  dark : DarkTheme ,
+}
 // import { useState, useEffect } from 'react';
 
 
@@ -29,12 +47,14 @@ const Feed = () => {
   // })
 const [helpBtn, setHelpBtn] = useState(false);
 const [open, setOpen] = useState(false);
+const [theme , setTheme] = useState("light");
 
 
   return (
+    <ThemeProvider theme={themes[theme]}>
 
     <div >
-      <Navbar setfunc ={setHelpBtn}   />
+      <Navbar setfunc ={setHelpBtn}  theme={theme} setTheme={setTheme} />
       <div style={mainStyle}>
         <Sidebar />
         <Posts openContent ={open} setOpenContent={setOpen} />
@@ -42,6 +62,7 @@ const [open, setOpen] = useState(false);
       <PostForm trigger={helpBtn} setTrigger={setHelpBtn} /> 
      
     </div>
+    </ThemeProvider>
   );
 }
 
