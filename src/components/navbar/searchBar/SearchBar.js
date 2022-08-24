@@ -6,7 +6,7 @@ const searchBar = () => {
   return (
     <>
     <InputStyled />
-    <ButtonStyled > <FaSearch/> Search </ButtonStyled>
+    <ButtonStyled > <FaSearch/>  </ButtonStyled>
     </> 
   );
 }

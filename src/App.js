@@ -1,10 +1,10 @@
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-
-
+import {useState} from 'react';
+import { ThemeProvider } from 'styled-components';
 
 //Styling App
 import { GlobalStyles } from "./globalStyle";
-
+import { themes } from './theme';
 
 //Pages
 import Feed from "./pages/feed/feed";
@@ -15,6 +15,7 @@ import SignUpPage from "./pages/signup/SignUpPage.js";
 
 
 const App = () => {
+  const [theme , setTheme] = useState("light");
   // const [counter, setCounter] = useState(0);
 
   // useEffect(() =>{
@@ -22,15 +23,17 @@ const App = () => {
   // })
 
   return (
+    <ThemeProvider theme={themes[theme]}>
     <Router>
       <GlobalStyles />
       <Routes >
-        <Route path="/"  element={<Feed />}></Route>
-        <Route path="/profil"  element={<Profil />}></Route>
-        <Route path="/signin" exact element={<SignInPage/>}></Route>
-        <Route path="/signup" exact element={<SignUpPage/>}></Route>
+        <Route path="/"  element={<Feed  theme={theme} setTheme={setTheme} />}></Route>
+        <Route path="/profil"  element={<Profil theme={theme} setTheme={setTheme} />}></Route>
+        <Route path="/signin" exact element={<SignInPage theme={theme} />}></Route>
+        <Route path="/signup" exact element={<SignUpPage theme={theme} />}></Route>
       </Routes>
     </Router>
+    </ThemeProvider>
     
   );
 }

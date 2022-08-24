@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 
 
+import {HiMoon} from 'react-icons/hi'
+import {CgSun} from 'react-icons/cg'
 
 import logo from './logo192.png';
 import SearchBar from './searchBar/SearchBar';
@@ -27,18 +28,20 @@ const Navbar = (props) => {
 
 
 
- // const icon = props.theme === "light" ? <HiMoon size={40} />:  <CgSun size={40} /> ;
+ const icon = props.theme === "light" ? <HiMoon size={20} />:  <CgSun size={20} /> ;
   return (
 
    <NavbarWhole >
       <DivInsideStyled>
-        <DivItemOne> <Link to="/"><img src={logo} alt="logo" /></Link> </DivItemOne>
+        <DivItemOne > <Link to="/"><img style ={{ border : '2px solid white' , borderRadius :'45px', padding : '2px'}} src={logo} alt="logo" /></Link> </DivItemOne>
         <DivItemTwo> <SearchBar /> </DivItemTwo>
         <DivItemThree> <HelpIcon  name = {props.setfunc}   /> </DivItemThree>
-        <button onClick={changeTheme}> d</button>
-        <DivItemFour> <Profile > <Menu></Menu> </Profile ></DivItemFour>
+        
+        <DivItemFour> <Profile  > <Menu  ></Menu> </Profile ></DivItemFour>
+        <button onClick={changeTheme} style={{padding : '5px'  , borderRadius:"25px"}}> {icon} </button>
       </DivInsideStyled>
-    
+
+      
     </NavbarWhole>
   );
 }

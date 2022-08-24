@@ -6,20 +6,20 @@ import { FaBuilding,FaFire,FaAppleAlt,FaTshirt } from 'react-icons/fa';
 const style = { color: "green", fontSize: "1.4em", margin: "0px 5px" };
 
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   return (
     <>
       <DivStyled>
       
         <DivSideSection>
-          <SideElement icon = {<FaBuilding style={style}/>}  name = {'organisation'} />
-          <SideElement icon = {<FaFire     style={style} />} name = {'Trends'} />
+          <SideElement icon = {<FaBuilding style={style}/>} theme = {props.theme} setTheme={props.setTheme} name = {'organisation'} />
+          <SideElement icon = {<FaFire     style={style} />} theme = {props.theme} setTheme={props.setTheme} name = {'Trends'} />
           <SpanLine></SpanLine>
         </DivSideSection>
         
         <DivSideSection>
-          <SideElement icon = {<FaAppleAlt style={style} />} name = {'Food'} />
-          <SideElement icon = {<FaTshirt style={style} />} name = {'Clothes'} />
+          <SideElement icon = {<FaAppleAlt style={style} />}theme = {props.theme} setTheme={props.setTheme}  name = {'Food'} />
+          <SideElement icon = {<FaTshirt style={style} />} theme = {props.theme} setTheme={props.setTheme} name = {'Clothes'} />
          
         </DivSideSection>
         <SpanLine></SpanLine>
@@ -29,12 +29,8 @@ const Sidebar = () => {
           <textarea></textarea>
          </DivSideSection>
          <SpanLine></SpanLine>
-        <LinkSideSection>
-          <ul style={{margin : '0px' }}>
-            <li> condition</li>
-            <li> legal</li>
-            <li> about </li>
-          </ul>
+        <LinkSideSection style={{margin : '0px' , color : 'grey'}}>
+          <a href="www.">conditions</a> - <a href="www.">about</a> - HELP 2022
         </LinkSideSection>
       </DivStyled>
       </>

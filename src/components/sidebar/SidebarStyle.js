@@ -19,10 +19,12 @@ export const DivSideSection = styled.div`
 
 export const LinkSideSection = styled.div`
 display : flex; 
-flex-direction : column ; 
 padding : 5px; 
 align-items: flex-start;
 justify-content: left;
+text-decoration: none;
+font-size : 12px;
+text-decoration-color: none ;
 `;
 
 export const ButtonLocation = styled.button`

@@ -5,10 +5,10 @@ import { DivProfil } from './profileStyle';
 import ProfileContent from '../../components/profileContent/ProfileContent';
 
 
-const Profil = () => {
+const Profil = (props) => {
   return (
     <div>
-      <Navbar />
+      <Navbar theme={props.theme} setTheme={props.setTheme} />
     <DivProfil>
       <ProfileHeader/>
       <ProfileContent/>

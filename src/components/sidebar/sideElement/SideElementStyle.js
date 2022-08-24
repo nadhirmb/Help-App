@@ -7,7 +7,7 @@ export const DivElement = styled.div`
   font-weight: Bold ;
   font-weight: 24px ;
   border-radius : 25px ;
-  border : 4px solid #9DD180 ;
+  border : 4px solid ${ props => props.theme.pageBackground } ;
   width : 280px ;
   margin: 5px ;
 
@@ -19,7 +19,6 @@ export const DivElement = styled.div`
   export const AElement = styled.a`
   padding : 5px 0;
   outline: none;
-  text-decoration: none;
   margin: 0;
   `;
 

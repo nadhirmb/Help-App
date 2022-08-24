@@ -13,13 +13,14 @@ export const InputStyled = styled.input`
 
 export const ButtonStyled = styled.button`
   appearance: none ;
-  padding: 10px ;
+  padding: 8px 10px ;
   border: none ;
   background-color : #F0F0F0 ;
   color: #121212 ;
   font-weight :100 ;
-  border-radius: 5px ;
+  border-radius: 25px ;
   transition-duration: 0.4s;
+  border : 1px solid green;
 &:hover{
   background-color: #121212;
   color: #F0F0F0;

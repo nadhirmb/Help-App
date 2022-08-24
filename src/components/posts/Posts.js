@@ -12,7 +12,12 @@ const  Posts = (props) => {
     return (
       <DivPostsStyled>
         {PostsData.map(item =>(
-          <Post last = {props.openContent} name = {props.setOpenContent} imgSrc={item.imgsrc} username={item.username} profilePicture = {item.profilePicture}/>
+          <Post last = {props.openContent} 
+          name = {props.setOpenContent} 
+          imgSrc={item.imgsrc} 
+          username={item.username} 
+          profilePicture = {item.profilePicture}
+          theme = {props.theme} />
         ))}
       
       </DivPostsStyled>
