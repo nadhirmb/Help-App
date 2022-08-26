@@ -14,6 +14,7 @@ export const DivElement = styled.div`
   &:hover {
     background-color: #9DD180;
   }
+  transition-duration: 0.4s;
   `;
 
   export const AElement = styled.a`

@@ -1,26 +1,32 @@
 import styled from "styled-components";
 
 export const ButtonDonate = styled.button`
-  background-color: rgba(100, 200, 100, 1);
-  border-radius : 5px ;
-  border : 1px solid grey ;
+  background-color: #4CAF50;
+  border-radius : 15px ;
+  border : 0px solid grey ;
   width : 150px; 
   padding : 5px;
+  color : white;
+  font-size : 14px ;
+  font-weight : bold ;
 
   &:hover{
-    background-color: rgba(80, 170, 80, 1)
+    background-color: #4CAF50 ;
   }
 `;
 
 export const ButtonUp = styled.button`
-  background-color: rgba(100, 200, 100, 1);
-  border-radius : 5px ;
-  border : 1px solid grey ;
+  background-color: #4CAF50;
+  border-radius : 15px ;
+  border : 0px solid grey ;
   width : 150px; 
   padding : 5px;
+  color : white;
+  font-size : 14px ;
+  font-weight : bold ;
   
   &:hover{
-    background-color: rgba(80, 170, 80, 1)
+    background-color: #4CAF50
   }
 `;
 

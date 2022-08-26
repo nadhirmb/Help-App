@@ -1,7 +1,7 @@
 
 
 const LightTheme = { 
-  pageBackground  : 'rgba(157, 209, 48, .3)' ,
+  pageBackground  : 'rgba(157, 209, 48, 0.5)' ,
   primaryGreen : '#A4E27B',
   secondaryGreen : '#00B194',
   primaryGrey : '#e5e5e5' ,

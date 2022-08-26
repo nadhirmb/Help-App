@@ -10,7 +10,11 @@ justify-content: center ;
 height: 60px ;
 position: sticky;
 top : 0;
+border-bottom : 1px solid #4CAF50 ;
 backdrop-filter: blur(3px);
+transition-duration: 0.4s;
+
+
 `;
 
 export const DivInsideStyled = styled.div`
