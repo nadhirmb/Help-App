@@ -15,32 +15,31 @@ export const FormStyling = styled.div`
 `;
 
 export const InsideForm = styled.div`
-  background: rgba(200, 200, 200, 0.192);
+  background: white ;
   backdrop-filter: blur(50px);
   position: relative;
   padding: 10px;
   width: 100%;
   max-width: 640px;
-  border-radius : 10px;
+  border-radius : 25px;
   border : 1px solid green ;
 `;
 
 export const CloseBtn = styled.button`
   position: absolute;
-  top: 30px;
-  right: 30px;
-  width: 100px;
-  padding: 5px;
-  color: lightsalmon;
+  top: -20px;
+  right: -20px;
+  width: 50px;
+  height: 50px;
+  color: green ;
   font-weight: bold;
+  border-radius: 50px ;
+  font-size: 36px;
+
 
   &:hover {
     background-color: rgba(150, 150, 150, 1);
     border: 0px;
-    top: 30px;
-    right: 30px;
-    width: 100px;
-    padding: 5px;
     border : 2px solid grey;
   }
 `;

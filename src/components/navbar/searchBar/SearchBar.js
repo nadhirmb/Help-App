@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonStyled, InputStyled } from './SearchBarStyle';
+import {  InputStyled } from './SearchBarStyle';
 import {FaSearch} from'react-icons/fa';
 
 const searchBar = () => {

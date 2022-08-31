@@ -12,7 +12,7 @@ const PostForm = (props) => {
   return props.trigger ? (
     <FormStyling>
       <InsideForm>
-        <CloseBtn onClick={() => props.setTrigger(false)}> Close </CloseBtn>
+        <CloseBtn onClick={() => props.setTrigger(false)}> X </CloseBtn>
         {props.childern}
         <form>
           <DivInput>

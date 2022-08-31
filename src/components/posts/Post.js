@@ -34,7 +34,7 @@ const imgS = {
 
 
             <ButtonDonate onClick={() => props.name(true)}>Donate</ButtonDonate>
-            <PostContent contentTrigger = {props.last} setContentTrigger={props.name} />
+            <PostContent contentTrigger = {props.last} setContentTrigger={props.name} imgSrc = {props.imgSrc} />
     
           </DivFooter>
         </DivPost>

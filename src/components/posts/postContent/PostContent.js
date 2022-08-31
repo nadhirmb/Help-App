@@ -1,24 +1,25 @@
 import React from 'react' ;
-import { InsidePostContent, PostContentStyled } from './PostContentStyle';
+import { CloseBtn, ContentElement, InsidePostContent, PostContentStyled } from './PostContentStyle';
 
 const PostContent = (props) => {
   return (props.contentTrigger) ? (
     <PostContentStyled>
-    <InsidePostContent>PostContent
-       <button onClick = {() => props.setContentTrigger(false)}> Close  </button>
+    <InsidePostContent>
+       <CloseBtn onClick = {() => props.setContentTrigger(false)}> X  </CloseBtn>
         {props.childern}
         <div>
-        <div>images carousel</div>
-        <div>title </div>
-        <div> time published </div>
-        <div> description </div>
-        <div> location </div>
-        <div> category </div>
-        <div> need </div>
-        <div> amount </div></div>
+        <ContentElement> <img src={props.imgSrc} alt="ok" width = "200px" /></ContentElement>
+        <ContentElement style={{fontWeight:'bold'}}> title </ContentElement>
+        <ContentElement> time published </ContentElement>
+        <ContentElement> description </ContentElement>
+        <ContentElement> location </ContentElement>
+        <ContentElement> category </ContentElement>
+        <ContentElement> need </ContentElement>
+        <ContentElement> amount </ContentElement></div>
     </InsidePostContent>
     </PostContentStyled>
-  ) : "" ;
+  ) : " " ;
 }
+
 
 export default PostContent
